@@ -1,39 +1,43 @@
-<script setup>
-import { ref } from 'vue'
-
-defineProps({
-    msg: String,
-})
-
-const count = ref(0)
-</script>
-
 <template>
-    <h1>{{ msg }}</h1>
-
-    <div class="card">
-        <button type="button" @click="count++">count is {{ count }}</button>
-        <p>
-            Edit
-            <code>components/HelloWorld.vue</code> to test HMR
-        </p>
+    <div>
+        <h1>About Us</h1>
+        <div class="about-content">
+            <p>
+                Crown Yourself Entertainment is a full service 
+                entertainment company specializing in DJ/ MC Services, 
+                Lighting, Sound Engineering, and Photo Booth services 
+                with over 15 years of experience serving the Greater 
+                Philadelphia area. We're here to help you create memories. 
+                Whether that's for your wedding, baby shower, birthday, 
+                or company event, it's all about you. We'll work with you 
+                to ensure your entertainment needs are met and your event 
+                is a success.  Contact me today to schedule your free 
+                consultation. Let's party!
+            </p>
+            <img src="path/to/your/image.jpg" alt="Your Image" />
+        </div>
     </div>
-
-    <p>
-        Check out
-        <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the official Vue + Vite
-        starter
-    </p>
-    <p>
-        Install
-        <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
-        in your IDE for a better DX
-    </p>
-    <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
-<style scoped>
-.read-the-docs {
-    color: #888;
+<style>
+h1 {
+    text-align: center;
 }
-</style>
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p {
+    flex: 1;
+    /* Allow the paragraph to grow and shrink as needed */
+    margin-right: 20px;
+    /* Add margin for spacing */
+}
+
+img {
+    max-width: 100%;
+    /* Make sure the image doesn't exceed its container */
+}</style>
