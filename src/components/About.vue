@@ -14,7 +14,7 @@
                 is a success.  Contact me today to schedule your free 
                 consultation. Let's party!
             </p>
-            <img src="path/to/your/image.jpg" alt="Your Image" />
+            <img src="../assets/aboutus.jpg" alt="DJ BAll hyping up the crowd" />
         </div>
     </div>
 </template>
@@ -32,12 +32,9 @@ h1 {
 
 p {
     flex: 1;
-    /* Allow the paragraph to grow and shrink as needed */
     margin-right: 20px;
-    /* Add margin for spacing */
 }
 
 img {
-    max-width: 100%;
-    /* Make sure the image doesn't exceed its container */
+    max-width: 50%;
 }</style>

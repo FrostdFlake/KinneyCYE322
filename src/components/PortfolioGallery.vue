@@ -1,7 +1,7 @@
 
 <template>
     <div>
-        <h1>YouTube Playlist Gallery</h1>
+        <h1>A sample of our work</h1>
         <div v-for="video in videos" :key="video.id">
             <iframe width="560" height="315" :src="'https://www.youtube.com/embed/' + video.id" frameborder="0"
                 allowfullscreen></iframe>
@@ -24,7 +24,7 @@ export default {
     methods: {
         async fetchPlaylistVideos() {
             const playlistId = 'PL2SgycZM2S_ZSBqfLU3_f95Mk8ztB83m8';
-            const apiKey = 'YOUR_API_KEY';
+            const apiKey = 'AIzaSyDYYaHXg_txmJrJDuE5dspqviYhYrpaHj8';
             const apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=10&playlistId=${playlistId}&key=${apiKey}`;
 
             try {

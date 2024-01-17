@@ -1,30 +1,35 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import { ref } from 'vue';
+import Logo from './components/Logo.vue';
+import Menu from './components/Menu.vue';
+import './style.css';
+
+const handleToggleDropdown = () => {
+  isOpen.value = !isOpen.value;
+};
+
+const fullSite = () => {
+  // Your logic to navigate to the 'all-components' route
+  // You can use router.push or router.replace, depending on your needs
+  // For example, assuming you have access to the router instance:
+  // router.push('/all-components');
+};
+
+const isOpen = ref(false);
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div id="app">
+    <Logo @toggle-dropdown="handleToggleDropdown" @full-site="fullSite" />
+    <Menu :isOpen="isOpen" />
+    <router-view />
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
+
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+#app {
+  text-align: center;
 }
 </style>
