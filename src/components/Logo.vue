@@ -1,11 +1,10 @@
 <template>
     <div>
-        <!-- <router-link @click="openFullSite"> -->
             <img src="../assets/kenlogo.png" class="logo" 
             alt="Crown Yourself Entertainment Logo 
             of colorful head wearing a crown"
+            @click="openFullSite"
             />
-        <!-- </router-link> -->
         <h1 @click="toggleDropdown">
             Crown Yourself Entertainment 
         </h1>
@@ -17,19 +16,19 @@
 <script>
 export default {
     name: 'Logo',
-    // props: {
-    //     fullSite: Function, 
-    // },
+    props: {
+        fullSite: Function, 
+    },
     methods: {
         toggleDropdown() {
             this.$emit('toggle-dropdown');
         },
-        // openFullSite() {
-        //     this.$emit('full-site');
-        //     if (typeof this.fullSite === 'function') {
-        //         this.fullSite();
-        //     }
-        // },
+        openFullSite() {
+            this.$emit('full-site');
+            if (typeof this.fullSite === 'function') {
+                this.fullSite();
+            }
+        },
     },
 };
 </script>

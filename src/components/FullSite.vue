@@ -22,6 +22,5 @@ watch(isOpen, (newVal) => {
         <PortfolioGallery/>
         <PricingAddOns/>
         <ContactForm/>
-        <router-view />
     </div>
 </template>
