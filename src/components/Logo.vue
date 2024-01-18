@@ -1,15 +1,15 @@
 <template>
     <div>
-         <router-link @click="fullSite" >
+        <!-- <router-link @click="openFullSite"> -->
             <img src="../assets/kenlogo.png" class="logo" 
             alt="Crown Yourself Entertainment Logo 
             of colorful head wearing a crown"
             />
-        </router-link>
-            <h1 @click="toggleDropdown">
-                Crown Yourself Entertainment 
-            </h1>
-            <p>Click to Enter</p>
+        <!-- </router-link> -->
+        <h1 @click="toggleDropdown">
+            Crown Yourself Entertainment 
+        </h1>
+        <p>Click to Enter</p>
     </div>
 </template>
 
@@ -17,19 +17,19 @@
 <script>
 export default {
     name: 'Logo',
-    props: {
-        fullSite: Function, // Define the prop for opening all components
-    },
+    // props: {
+    //     fullSite: Function, 
+    // },
     methods: {
         toggleDropdown() {
             this.$emit('toggle-dropdown');
         },
-        fullSite() {
-            // Call the fullSite function from the prop
-            if (typeof this.fullSite === 'function') {
-                this.fullSite();
-            }
-        },
+        // openFullSite() {
+        //     this.$emit('full-site');
+        //     if (typeof this.fullSite === 'function') {
+        //         this.fullSite();
+        //     }
+        // },
     },
 };
 </script>
@@ -57,7 +57,7 @@ h1:hover {
 }
 
 p {
-    background-color: #4c5bddaa;
+    color: #4c5bddaa;
     
 }
 </style>
